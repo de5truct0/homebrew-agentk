@@ -6,8 +6,10 @@ This is the official Homebrew tap for [AGENT-K](https://github.com/de5truct0/age
 
 ```bash
 brew tap de5truct0/agentk
-brew install agentk
+brew install agentk8
 ```
+
+> **Note**: The package is named `agentk8` for consistency with npm and pip. The command installed is still `agentk`.
 
 ## What is AGENT-K?
 
@@ -39,13 +41,13 @@ agentk --help             # Show all options
 
 ```bash
 brew update
-brew upgrade agentk
+brew upgrade agentk8
 ```
 
 ## Uninstalling
 
 ```bash
-brew uninstall agentk
+brew uninstall agentk8
 brew untap de5truct0/agentk
 ```
 
