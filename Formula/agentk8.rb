@@ -5,7 +5,7 @@ class Agentk8 < Formula
   desc "Multi-Agent Claude Code Terminal Suite"
   homepage "https://github.com/de5truct0/agentk"
   url "https://github.com/de5truct0/agentk/archive/refs/tags/v1.0.1.tar.gz"
-  sha256 "d016f880bd1fc1e9c6006487ef77af159dabd10c9edbe1730c51a403c97267a9"
+  sha256 "956c2a5e2a4e649368d5ee54354d951f98ee8d0b50052cb7287bb356cbf69963"
   license "MIT"
   head "https://github.com/de5truct0/agentk.git", branch: "main"
 
