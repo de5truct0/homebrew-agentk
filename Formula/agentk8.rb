@@ -4,12 +4,11 @@
 class Agentk8 < Formula
   desc "Multi-Agent Claude Code Terminal Suite"
   homepage "https://github.com/de5truct0/agentk"
-  url "https://github.com/de5truct0/agentk/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  url "https://github.com/de5truct0/agentk/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "d016f880bd1fc1e9c6006487ef77af159dabd10c9edbe1730c51a403c97267a9"
   license "MIT"
   head "https://github.com/de5truct0/agentk.git", branch: "main"
 
-  depends_on "bash" => ">= 4.0"
   depends_on "jq"
 
   # Claude Code CLI is required but not in Homebrew
