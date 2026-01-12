@@ -4,31 +4,15 @@
 class Agentk8 < Formula
   desc "Multi-Agent Claude Code Terminal Suite"
   homepage "https://github.com/de5truct0/agentk"
-  url "https://github.com/de5truct0/agentk/archive/refs/tags/v1.0.5.tar.gz"
-  sha256 "a5f66a4d51b9ffc6f62fbe9dda5dcc76ede527e731162158ff208f3e11a0b2fd"
+  url "https://registry.npmjs.org/agentk8/-/agentk8-2.0.0.tgz"
+  sha256 "acdc94016a95308817ccfb2300e554bf8d5a25d7"
   license "MIT"
-  head "https://github.com/de5truct0/agentk.git", branch: "main"
 
-  depends_on "jq"
-
-  # Claude Code CLI is required but not in Homebrew
-  # Users must install it separately
+  depends_on "node"
 
   def install
-    # Install library files to libexec
-    (libexec/"lib").install Dir["lib/*"]
-    (libexec/"modes").install Dir["modes/*"]
-
-    # Install main script to libexec
-    libexec.install "agentk"
-
-    # Create wrapper that sets AGENTK_ROOT
-    (bin/"agentk").write <<~EOS
-      #!/usr/bin/env bash
-      export AGENTK_ROOT="#{libexec}"
-      exec "#{libexec}/agentk" "$@"
-    EOS
-    (bin/"agentk").chmod 0755
+    system "npm", "install", *std_npm_args
+    bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
   def caveats
@@ -43,13 +27,10 @@ class Agentk8 < Formula
         agentk              # Start dev mode
         agentk --mode ml    # Start ML mode
         agentk --help       # Show all options
-
-      Optional: Install tmux for visual mode:
-        brew install tmux
     EOS
   end
 
   test do
-    assert_match "AGENT-K v", shell_output("#{bin}/agentk --version")
+    assert_match "2.0.0", shell_output("#{bin}/agentk --version")
   end
 end
