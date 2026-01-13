@@ -5,7 +5,7 @@ class Agentk8 < Formula
   desc "Multi-Agent Claude Code Terminal Suite"
   homepage "https://github.com/de5truct0/agentk"
   url "https://registry.npmjs.org/agentk8/-/agentk8-2.1.2.tgz"
-  sha256 "7c7e241d47c5403f79105b9cc200daa23c03406e"
+  sha256 "053a054e3b80657a9f203faafaecb4294bc1a6cb393224d67e34a89a948fe4e4"
   license "MIT"
 
   depends_on "node"
