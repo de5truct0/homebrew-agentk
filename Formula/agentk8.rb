@@ -4,8 +4,8 @@
 class Agentk8 < Formula
   desc "Multi-Agent Claude Code Terminal Suite"
   homepage "https://github.com/de5truct0/agentk"
-  url "https://registry.npmjs.org/agentk8/-/agentk8-2.1.3.tgz"
-  sha256 "b446a0f4f8b462a8064b7a2097d0dc27bc6f225dc2209ef90ebda8b20950319b"
+  url "https://registry.npmjs.org/agentk8/-/agentk8-2.1.4.tgz"
+  sha256 "ee6cd92bd1b8e4ad015b907d416f687b2502e3e0563c4eebfc2661e0b9243eec"
   license "MIT"
 
   depends_on "node"
@@ -31,6 +31,6 @@ class Agentk8 < Formula
   end
 
   test do
-    assert_match "2.1.3", shell_output("#{bin}/agentk8 --version")
+    assert_match "2.1.4", shell_output("#{bin}/agentk8 --version")
   end
 end
