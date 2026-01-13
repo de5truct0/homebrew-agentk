@@ -4,8 +4,8 @@
 class Agentk8 < Formula
   desc "Multi-Agent Claude Code Terminal Suite"
   homepage "https://github.com/de5truct0/agentk"
-  url "https://registry.npmjs.org/agentk8/-/agentk8-2.1.2.tgz"
-  sha256 "053a054e3b80657a9f203faafaecb4294bc1a6cb393224d67e34a89a948fe4e4"
+  url "https://registry.npmjs.org/agentk8/-/agentk8-2.1.3.tgz"
+  sha256 "b446a0f4f8b462a8064b7a2097d0dc27bc6f225dc2209ef90ebda8b20950319b"
   license "MIT"
 
   depends_on "node"
@@ -21,16 +21,16 @@ class Agentk8 < Formula
       Install it from: https://claude.ai/code
 
       To verify installation:
-        agentk --version
+        agentk8 --version
 
       To get started:
-        agentk              # Start dev mode
-        agentk --mode ml    # Start ML mode
-        agentk --help       # Show all options
+        agentk8              # Start dev mode
+        agentk8 --mode ml    # Start ML mode
+        agentk8 --help       # Show all options
     EOS
   end
 
   test do
-    assert_match "2.1.2", shell_output("#{bin}/agentk --version")
+    assert_match "2.1.3", shell_output("#{bin}/agentk8 --version")
   end
 end
