@@ -1,11 +1,11 @@
 # Homebrew Formula for AGENT-K
-# Multi-Agent Claude Code Terminal Suite
+# Multi-LLM Council Terminal Suite
 
 class Agentk8 < Formula
-  desc "Multi-Agent Claude Code Terminal Suite"
+  desc "Multi-LLM Council Terminal Suite - Three-stage consensus"
   homepage "https://github.com/de5truct0/agentk"
-  url "https://registry.npmjs.org/agentk8/-/agentk8-2.2.6.tgz"
-  sha256 "4579518c9dfa7e13111c06dbee2d89a1cb95badb13dd57da40a1c3db1e8d828f"
+  url "https://registry.npmjs.org/agentk8/-/agentk8-2.3.0.tgz"
+  sha256 "a2bf0716d7b2adb6b97e5d78f5cefc66ab463e0ece1c4f8c3e8ba3a7579a6fdf"
   license "MIT"
 
   depends_on "node"
@@ -31,6 +31,6 @@ class Agentk8 < Formula
   end
 
   test do
-    assert_match "2.2.6", shell_output("#{bin}/agentk8 --version")
+    assert_match "2.3.0", shell_output("#{bin}/agentk8 --version")
   end
 end
