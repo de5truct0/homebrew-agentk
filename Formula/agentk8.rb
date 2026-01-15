@@ -4,8 +4,8 @@
 class Agentk8 < Formula
   desc "Multi-LLM Council Terminal Suite - Three-stage consensus"
   homepage "https://github.com/de5truct0/agentk"
-  url "https://registry.npmjs.org/agentk8/-/agentk8-2.3.5.tgz"
-  sha256 "802dfd2fa7af922f15e7116b03a0fb43c3d0a83f51c5715f9830906f3193df85"
+  url "https://registry.npmjs.org/agentk8/-/agentk8-2.3.6.tgz"
+  sha256 "81f335bfb7458f484272c68c3481fc94c4959a396792d6e3346596371040d31a"
   license "MIT"
 
   depends_on "node"
@@ -31,6 +31,6 @@ class Agentk8 < Formula
   end
 
   test do
-    assert_match "2.3.5", shell_output("#{bin}/agentk8 --version")
+    assert_match "2.3.6", shell_output("#{bin}/agentk8 --version")
   end
 end
